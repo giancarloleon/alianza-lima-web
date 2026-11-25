@@ -2,13 +2,19 @@
   "name": "alianza-lima-web",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://giancarloleon/alianza-lima-web",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.119.0",
+    "framer-motion": "^14.12.0",
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0"
@@ -20,6 +26,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "4.3.3",
     "typescript": "^5"
   }

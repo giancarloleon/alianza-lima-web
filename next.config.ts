@@ -1,7 +1,16 @@
 import type { NextConfig } from "next";
 
+
 const nextConfig: NextConfig = {
   /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org', // Aquí le damos permiso a Wikipedia
+      },
+    ],
+  },
   experimental: {
     agentFeedback: true,
   },
@@ -15,6 +24,7 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  
 };
 
 export default nextConfig;
